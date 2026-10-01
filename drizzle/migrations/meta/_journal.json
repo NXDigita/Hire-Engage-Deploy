@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1790657315410,
+      "tag": "0000_create_intern_dashboard",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1790657408485,
+      "tag": "0001_create_internship_track_templates",
+      "breakpoints": true
+    }
+  ]
+}
