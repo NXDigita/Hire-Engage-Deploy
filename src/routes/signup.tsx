@@ -60,7 +60,7 @@ async function googleSignIn() {
   const result = await supabase.auth.signInWithOAuth({
     provider: "google",
     options: {
-      redirectTo: "https://hire-engage-deploy.vercel.app/dashboard",
+      redirectTo: "https://hire-engage-deploy.vercel.app",
     },
   });
 
@@ -69,6 +69,8 @@ async function googleSignIn() {
     setBusy(false);
   }
 }
+
+
 
   return <div className="min-h-screen bg-background">
     <div className="dark-panel h-2" />
