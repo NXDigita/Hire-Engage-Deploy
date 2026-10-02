@@ -52,19 +52,20 @@ function Signup() {
   //   if (result.error) { setError(result.error.message); setBusy(false); return; }
   //   if (!result.redirected) await navigate({ to: "/dashboard" });
   // }
+
 async function googleSignIn() {
   setBusy(true);
   setError("");
 
- await supabase.auth.signInWithOAuth({
-  provider: "google",
-  options: {
-    redirectTo: "https://hire-engage-deploy.vercel.app",
-  },
-});
+  const result = await supabase.auth.signInWithOAuth({
+    provider: "google",
+    options: {
+      redirectTo: "https://hire-engage-deploy.vercel.app/dashboard",
+    },
+  });
 
-  if (error) {
-    setError(error.message);
+  if (result.error) {
+    setError(result.error.message);
     setBusy(false);
   }
 }
