@@ -60,8 +60,8 @@ async function googleSignIn() {
   const result = await supabase.auth.signInWithOAuth({
     provider: "google",
     options: {
-      redirectTo: "https://hire-engage-deploy.vercel.app",
-    },
+      redirectTo: "window.location.origin",
+    }
   });
 
   if (result.error) {
