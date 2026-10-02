@@ -56,12 +56,12 @@ async function googleSignIn() {
   setBusy(true);
   setError("");
 
-  const { error } = await supabase.auth.signInWithOAuth({
-    provider: "google",
-    options: {
-      redirectTo: `${window.location.origin}/dashboard`,
-    },
-  });
+ await supabase.auth.signInWithOAuth({
+  provider: "google",
+  options: {
+    redirectTo: "https://hire-engage-deploy.vercel.app",
+  },
+});
 
   if (error) {
     setError(error.message);
